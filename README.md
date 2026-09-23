@@ -41,6 +41,8 @@ AutomationExercise/
 ├── config.py                # Loads .env into usable config values
 ├── conftest.py               # Fixtures + ad-blocking
 ├── pytest.ini                 # Marker registration
+├── .gitgnore                 # Excludes .env, caches, and generated report folders from git
+├── .env.example                 # Template for required environment variables
 └── requirements.txt
 ```
 
@@ -70,6 +72,7 @@ TEST_USER_NAME=Customer
 TEST_USER_EMAIL=customer1st@gmail.com
 TEST_USER_PASSWORD=Password123
 ```
+`.env` is gitignored and never committed — only `.env.example` (a blank template) is tracked. This isn't just convention: this site's "Delete Account" has no confirmation step, so a leaked credential could let anyone delete the fixture account this suite depends on.
 
 ---
 
