@@ -68,9 +68,9 @@ cp .env.example .env
 Fill in `.env` with a registered account on automationexercise.com. For convenience, this demo account is safe to use as-is (this is a public QA practice site — no real data, no sensitivity):
 
 ```
-TEST_USER_NAME=Customer
-TEST_USER_EMAIL=customer1st@gmail.com
-TEST_USER_PASSWORD=Password123
+TEST_USER_NAME=Demo Tester
+TEST_USER_EMAIL=demo.tester@example.com
+TEST_USER_PASSWORD=DemoTester123
 ```
 `.env` is gitignored and never committed — only `.env.example` (a blank template) is tracked. This isn't just convention: this site's "Delete Account" has no confirmation step, so a leaked credential could let anyone delete the fixture account this suite depends on.
 
